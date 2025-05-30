@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  ros2-humble:
+    container_name: ros2-humble-dev
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./ros2_ws:/ros2_ws
+    command: bash
+    tty: true
+    stdin_open: true
+    network_mode: "host"

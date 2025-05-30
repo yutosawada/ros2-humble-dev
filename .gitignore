@@ -1,0 +1,13 @@
+# ROS2ワークスペースのソースディレクトリを無視
+ros2_ws/src/*
+
+# ビルド関連ファイル
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# その他の一般的な無視ファイル
+*.swp
+*.swo
+*~
+.DS_Store
