@@ -1,0 +1,128 @@
+# 使用方法:
+# このYAMLファイルは、clone_repos.shスクリプトで複数のリポジトリをクローンするための設定ファイルです。
+# repositories配下にname, url, branch, commitを記述してください。
+# - name: クローン先ディレクトリ名
+# - url: リポジトリのURL
+# - branch: チェックアウトするブランチ名（空欄の場合はデフォルトブランチ）
+# - commit: チェックアウトするコミットID（空欄の場合は最新コミット）
+#
+# 例:
+# repositories:
+#   - name: sample_repo1
+#     url: https://github.com/example/sample_repo1.git
+#     branch: develop
+#     commit:
+#   - name: sample_repo2
+#     url: https://github.com/example/sample_repo2.git
+#     branch:
+#     commit:
+#
+# clone_repos.sh を実行すると、各リポジトリが ./ros2_ws/src/ 以下にクローンされます。
+#
+# 依存: yq コマンドが必要です。
+# インストール例: sudo apt install yq
+#
+# --- 以下、設定 ---
+
+
+repositories:
+  - name: amr-description
+    url: https://github.com/InnovationDept-FUJI/amr-description.git
+    branch:
+    commit:
+
+  - name: motion-control-mecanum
+    url: https://github.com/yutosawada/motion-control-mecanum.git
+    branch:
+    commit:
+
+#  - name: navigation2
+#    url: https://github.com/InnovationDept-FUJI/navigation2.git
+#    branch:
+#dock    commit:
+  
+  - name: teleop_twist_joy
+    url: https://github.com/ros2/teleop_twist_joy.git
+    branch: humble
+    commit:
+
+apt_packages:
+  builder:
+    - name: python3-colcon-common-extensions
+      version:
+    - name: vim
+      version:
+    - name: locales
+      version:   
+    - name: git
+      version:   
+    - name: can-utils
+      version:
+    - name: ros-humble-can-msgs
+      version:
+    - name: ros-humble-ros2-socketcan
+      version:
+    - name: ros-humble-bond-core
+      version:
+    - name: ros-humble-bondcpp
+      version:
+    - name: ros-humble-test-msgs
+      version:
+    - name: ros-humble-behaviortree-cpp-v3
+      version:
+    - name: ros-humble-diagnostic-updater
+      version:
+    - name: ros-humble-rviz-common
+      version:
+    - name: ros-humble-rviz-default-plugins
+      version:
+    - name: ros-humble-angles
+      version:
+    - name: ros-humble-robot-state-publisher
+      version:
+    - name: ros-humble-tf2-ros
+      version:
+    - name: ros-humble-tf2-geometry-msgs
+      version:
+    - name: ros-humble-tf2-sensor-msgs
+      version:
+    - name: ros-humble-tf2-tools
+      version:      
+    - name: ros-humble-xacro
+      version:
+    - name: ros-humble-cv-bridge
+      version:
+      
+    - name: libboost-program-options-dev
+      version:
+    - name: libboost-system-dev
+      version:
+    - name: libgraphicsmagick1-dev
+      version:
+    - name: libgraphicsmagick++1-dev
+      version:
+    - name: libceres-dev
+      version:
+    - name: libxtensor-dev
+      version:
+    - name: libopencv-dev
+      version:      
+    - name: libompl-dev
+      version:
+    - name: libboost-serialization-dev 
+      version:    
+    - name: qtbase5-dev
+      version:
+    - name: qtchooser
+      version:
+    - name: qt5-qmake
+      version:
+    - name: qtbase5-dev-tools
+      version:
+    - name: libboost-filesystem-dev
+      version:
+    - name: ros-humble-gazebo-ros-pkgs
+      version:
+    - name: x11-apps
+      version:
+    

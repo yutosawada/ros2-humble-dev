@@ -8,7 +8,17 @@ services:
       dockerfile: docker/Dockerfile
     volumes:
       - ./ros2_ws:/ros2_ws
+      # X11 ソケットをマウント
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      # （必要なら）ユーザーの Xauthority を共有
+      - ~/.Xauthority:/root/.Xauthority:rw
+    environment:
+      # ホストの DISPLAY 環境をコンテナに渡す
+      - DISPLAY=${DISPLAY}
+      # Xauthority のパス（ユーザー名に合わせて書き換え）
+      - XAUTHORITY=/root/.Xauthority
+    network_mode: "host"
+    user: "${UID}:${GID}"     # ホストのユーザー権限で動かす場合
     command: bash
     tty: true
     stdin_open: true
-    network_mode: "host"
