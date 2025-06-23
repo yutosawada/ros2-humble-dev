@@ -58,7 +58,9 @@ apt_packages:
       version:   
     - name: can-utils
       version:
-    - name: ros-humble-joy
+    - name: ros-humble-teleop-tools
+      version:
+    - name: ros-humble-joy-linux
       version:
     - name: ros-humble-can-msgs
       version:

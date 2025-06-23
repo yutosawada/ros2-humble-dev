@@ -1,24 +1,32 @@
-version: '3.8'
+version: "3.8"
 
 services:
   ros2-humble:
     container_name: ros2-humble-dev
+
     build:
       context: .
       dockerfile: docker/Dockerfile
+
+    # ── 共有フォルダ ───────────────────────────────
     volumes:
-      - ./ros2_ws:/ros2_ws
-      # X11 ソケットをマウント
-      - /tmp/.X11-unix:/tmp/.X11-unix:rw
-      # （必要なら）ユーザーの Xauthority を共有
-      - ~/.Xauthority:/root/.Xauthority:rw
+      - ./ros2_ws:/ros2_ws                       # ROS2 ワークスペース
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw         # X11 ソケット
+      - ${HOME}/.Xauthority:${HOME}/.Xauthority:rw  # Xauthority
+      - /dev/input:/dev/input:rw                 # ★ ジョイスティック/キーボード入力
+
+    # ── 実行環境変数 ─────────────────────────────
     environment:
-      # ホストの DISPLAY 環境をコンテナに渡す
       - DISPLAY=${DISPLAY}
-      # Xauthority のパス（ユーザー名に合わせて書き換え）
-      - XAUTHORITY=/root/.Xauthority
-    network_mode: "host"
-    user: "${UID}:${GID}"     # ホストのユーザー権限で動かす場合
-    command: bash
+      - XAUTHORITY=${HOME}/.Xauthority
+      - QT_X11_NO_MITSHM=1                       # Qt系 GUI の共有メモリ問題回避 (任意)
+      - ROS_DOMAIN_ID=32                          # ROS2 ドメイン ID (任意)
+      - ROS_LOCALHOST_ONLY=0
+      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+
+    network_mode: "host"                         # ROS マルチキャスト & GUI 転送向け
+    privileged: true                             # ★ /dev/input 等を確実に扱う
+
     tty: true
     stdin_open: true
+    command: bash
