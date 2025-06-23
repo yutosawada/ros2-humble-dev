@@ -31,20 +31,16 @@ repositories:
     branch:
     commit:
 
-  - name: motion-control-mecanum
-    url: https://github.com/yutosawada/motion-control-mecanum.git
-    branch: develop
+#  - name: motion-control-mecanum
+#    url: https://github.com/yutosawada/motion-control-mecanum.git
+#    branch: develop
+#    commit:
+
+  - name: navigation2
+    url: https://github.com/InnovationDept-FUJI/navigation2.git
+    branch:
     commit:
 
-#  - name: navigation2
-#    url: https://github.com/InnovationDept-FUJI/navigation2.git
-#    branch:
-#dock    commit:
-  
-  - name: teleop_twist_joy
-    url: https://github.com/ros2/teleop_twist_joy.git
-    branch: humble
-    commit:
 
 apt_packages:
   builder:
@@ -95,8 +91,9 @@ apt_packages:
     - name: ros-humble-xacro
       version:
     - name: ros-humble-cv-bridge
-      version:
-      
+      version:      
+    - name: ros-humble-geographic-msgs
+      version:      
     - name: libboost-program-options-dev
       version:
     - name: libboost-system-dev

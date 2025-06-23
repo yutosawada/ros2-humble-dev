@@ -6,6 +6,10 @@ RUN apt-get update && apt-get install -y wget && \
     chmod +x /usr/local/bin/yq && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
+RUN mkdir -p /ros2_ws/src && \
+    rosdep update && \
+    rosdep install --from-paths /ros2_ws/src --ignore-src -r -y --rosdistro humble
+
 # 必要なツールと依存関係をインストール
 COPY clone_repos_config.yaml /tmp/clone_repos_config.yaml
 COPY docker/scripts/install_packages.sh /tmp/install_packages.sh
