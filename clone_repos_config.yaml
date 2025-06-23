@@ -33,7 +33,7 @@ repositories:
 
   - name: motion-control-mecanum
     url: https://github.com/yutosawada/motion-control-mecanum.git
-    branch:
+    branch: develop
     commit:
 
 #  - name: navigation2
@@ -57,6 +57,8 @@ apt_packages:
     - name: git
       version:   
     - name: can-utils
+      version:
+    - name: ros-humble-joy
       version:
     - name: ros-humble-can-msgs
       version:
