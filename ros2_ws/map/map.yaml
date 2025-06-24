@@ -1,0 +1,6 @@
+image: /ros2_ws/map/map.pgm
+resolution: 0.030000
+origin: [-9.285000, -33.825001, 0.0]
+negate: 0
+occupied_thresh: 0.970000
+free_thresh: 0.120000

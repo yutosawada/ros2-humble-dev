@@ -38,7 +38,7 @@ repositories:
 
   - name: navigation2
     url: https://github.com/InnovationDept-FUJI/navigation2.git
-    branch:
+    branch: humble
     commit:
 
 
@@ -93,7 +93,10 @@ apt_packages:
     - name: ros-humble-cv-bridge
       version:      
     - name: ros-humble-geographic-msgs
-      version:      
+      version:
+    - name: ros-humble-behaviortree-cpp-v3 
+      version:
+           
     - name: libboost-program-options-dev
       version:
     - name: libboost-system-dev

@@ -23,6 +23,7 @@ services:
       - ROS_DOMAIN_ID=32                          # ROS2 ドメイン ID (任意)
       - ROS_LOCALHOST_ONLY=0
       - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+      - ROS_LOG_DIR=/ros2_ws/execute_logs
 
     network_mode: "host"                         # ROS マルチキャスト & GUI 転送向け
     privileged: true                             # ★ /dev/input 等を確実に扱う
