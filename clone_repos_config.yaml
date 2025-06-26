@@ -51,6 +51,11 @@ repositories:
     branch: humble-devel
     commit:
 
+  - name: teleop_tools
+    url: https://github.com/InnovationDept-FUJI/teleop_tools.git
+    branch: humble
+    commit:
+
 apt_packages:
   builder:
     - name: python3-colcon-common-extensions
@@ -63,8 +68,8 @@ apt_packages:
       version:   
     - name: can-utils
       version:
-    - name: ros-humble-teleop-tools
-      version:
+#    - name: ros-humble-teleop-tools
+#      version:
     - name: ros-humble-joy-linux
       version:
     - name: ros-humble-can-msgs
@@ -139,4 +144,7 @@ apt_packages:
       version:
     - name: x11-apps
       version:
-    
+    - name: libgeographic-dev
+      version:
+    - name: geographiclib-tools
+      version:
