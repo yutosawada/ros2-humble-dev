@@ -13,7 +13,7 @@ services:
       - ./ros2_ws:/ros2_ws                       # ROS2 ワークスペース
       - /tmp/.X11-unix:/tmp/.X11-unix:rw         # X11 ソケット
       - ${HOME}/.Xauthority:${HOME}/.Xauthority:rw  # Xauthority
-      - /dev/input:/dev/input:rw                 # ★ ジョイスティック/キーボード入力
+      - /dev:/dev
 
     # ── 実行環境変数 ─────────────────────────────
     environment:

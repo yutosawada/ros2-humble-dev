@@ -21,6 +21,7 @@ RUN bash /tmp/install_packages.sh /tmp/clone_repos_config.yaml apt_packages.buil
 
 # ROS 2 のセットアップを自動で source
 RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
+RUN echo "source /ros2_ws/install/setup.bash" >> /root/.bashrc
 
 WORKDIR /ros2_ws
 CMD ["bash"]

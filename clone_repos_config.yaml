@@ -26,15 +26,20 @@
 
 
 repositories:
+  - name: amr-bringup
+    url: https://github.com/InnovationDept-FUJI/amr-bringup.git
+    branch:
+    commit:
+
   - name: amr-description
     url: https://github.com/InnovationDept-FUJI/amr-description.git
     branch:
     commit:
 
-#  - name: motion-control-mecanum
-#    url: https://github.com/yutosawada/motion-control-mecanum.git
-#    branch: develop
-#    commit:
+  - name: motion-control-mecanum
+    url: https://github.com/yutosawada/motion-control-mecanum.git
+    branch: develop
+    commit:
 
   - name: navigation2
     url: https://github.com/InnovationDept-FUJI/navigation2.git
@@ -96,7 +101,8 @@ apt_packages:
       version:
     - name: ros-humble-behaviortree-cpp-v3 
       version:
-           
+    - name: ros-humble-realsense2-camera 
+      version:       
     - name: libboost-program-options-dev
       version:
     - name: libboost-system-dev
