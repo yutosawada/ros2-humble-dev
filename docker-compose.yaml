@@ -14,18 +14,23 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw         # X11 ソケット
       - ${HOME}/.Xauthority:${HOME}/.Xauthority:rw  # Xauthority
       - /dev:/dev
+      - ./cyclonedds_no_shm.xml:/etc/cyclonedds_no_shm.xml:ro
 
     # ── 実行環境変数 ─────────────────────────────
     environment:
+
+      - ROS_DOMAIN_ID=32                          # ROS2 ドメイン ID (任意)
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+      - CYCLONEDDS_URI=file:///etc/cyclonedds_no_shm.xml
       - DISPLAY=${DISPLAY}
       - XAUTHORITY=${HOME}/.Xauthority
       - QT_X11_NO_MITSHM=1                       # Qt系 GUI の共有メモリ問題回避 (任意)
-      - ROS_DOMAIN_ID=32                          # ROS2 ドメイン ID (任意)
-      - ROS_LOCALHOST_ONLY=0
-      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
       - ROS_LOG_DIR=/ros2_ws/execute_logs
 
-    network_mode: "host"                         # ROS マルチキャスト & GUI 転送向け
+
+
+    network_mode: host
+    ipc: host
     privileged: true                             # ★ /dev/input 等を確実に扱う
 
     tty: true

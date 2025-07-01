@@ -1,0 +1,7 @@
+<CycloneDDS>
+  <Domain>
+    <SharedMemory>
+      <Enable>false</Enable>
+    </SharedMemory>
+  </Domain>
+</CycloneDDS>

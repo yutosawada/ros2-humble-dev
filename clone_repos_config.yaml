@@ -148,3 +148,11 @@ apt_packages:
       version:
     - name: geographiclib-tools
       version:
+    - name: ros-humble-rmw-cyclonedds-cpp
+      version:
+    - name: tcpdump
+      version:
+    - name: iptables
+      version:
+    - name: iproute2
+      version:
