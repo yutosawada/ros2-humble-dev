@@ -96,7 +96,7 @@ apt_packages:
       version:
     - name: ros-humble-rviz-default-plugins
       version:
-    - name: ros-humble-rviz-common-plugins
+    - name: ros-humble-rviz-imu-plugin
       version:
     - name: ros-humble-angles
       version:
