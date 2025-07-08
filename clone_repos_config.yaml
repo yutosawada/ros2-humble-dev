@@ -96,6 +96,8 @@ apt_packages:
       version:
     - name: ros-humble-rviz-default-plugins
       version:
+    - name: ros-humble-rviz-common-plugins
+      version:
     - name: ros-humble-angles
       version:
     - name: ros-humble-robot-state-publisher
