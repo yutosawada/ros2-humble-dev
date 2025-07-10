@@ -26,17 +26,17 @@
 
 
 repositories:
-  - name: amr-bringup
+  - name: amr_bringup
     url: https://github.com/InnovationDept-FUJI/amr_bringup.git
     branch:
     commit:
 
-  - name: amr-description
+  - name: amr_description
     url: https://github.com/InnovationDept-FUJI/amr_description.git
     branch:
     commit:
 
-  - name: motion-control-mecanum
+  - name: motion_control_mecanum
     url: https://github.com/InnovationDept-FUJI/motion_control_mecanum.git
     branch: develop
     commit:
@@ -46,10 +46,10 @@ repositories:
     branch: humble
     commit:
 
-#  - name: robot_localization
-#    url: https://github.com/InnovationDept-FUJI/robot_localization.git
-#    branch: humble-devel
-#    commit:
+  - name: robot_localization
+    url: https://github.com/InnovationDept-FUJI/robot_localization.git
+    branch: humble-devel
+    commit:
 
   - name: teleop_tools
     url: https://github.com/InnovationDept-FUJI/teleop_tools.git
@@ -60,7 +60,21 @@ repositories:
     url: https://github.com/InnovationDept-FUJI/map_odom_broadcaster.git
     branch: main
     commit:
+  
+  - name: localization_sim
+    url: https://github.com/InnovationDept-FUJI/localization_sim.git
+    branch: main
+    commit:
 
+#  - name: liftup
+#    url: https://github.com/InnovationDept-FUJI/liftup.git
+#    branch: main
+#    commit:
+
+#  - name: active_caster
+#    url: https://github.com/InnovationDept-FUJI/active_caster.git
+#    branch: develop
+#    commit:
 
 apt_packages:
   builder:
@@ -109,7 +123,9 @@ apt_packages:
     - name: ros-humble-tf2-sensor-msgs
       version:
     - name: ros-humble-tf2-tools
-      version:      
+      version:
+    - name: ros-humble-rqt-tf-tree
+      version:
     - name: ros-humble-xacro
       version:
     - name: ros-humble-cv-bridge
