@@ -27,17 +27,17 @@
 
 repositories:
   - name: amr-bringup
-    url: https://github.com/InnovationDept-FUJI/amr-bringup.git
+    url: https://github.com/InnovationDept-FUJI/amr_bringup.git
     branch:
     commit:
 
   - name: amr-description
-    url: https://github.com/InnovationDept-FUJI/amr-description.git
+    url: https://github.com/InnovationDept-FUJI/amr_description.git
     branch:
     commit:
 
   - name: motion-control-mecanum
-    url: https://github.com/yutosawada/motion-control-mecanum.git
+    url: https://github.com/InnovationDept-FUJI/motion_control_mecanum.git
     branch: develop
     commit:
 
