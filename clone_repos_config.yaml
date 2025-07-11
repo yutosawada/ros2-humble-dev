@@ -102,6 +102,7 @@ apt_packages:
       version:
     - name: ros-humble-test-msgs
       version:
+#    - name: ros-humble-behaviortree-cpp-v4
     - name: ros-humble-behaviortree-cpp-v3
       version:
     - name: ros-humble-diagnostic-updater
