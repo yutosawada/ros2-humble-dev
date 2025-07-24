@@ -154,7 +154,7 @@ apt_packages:
     - name: libompl-dev
       version:
     - name: libboost-serialization-dev 
-      version:    
+      version:
     - name: qtbase5-dev
       version:
     - name: qtchooser
@@ -181,3 +181,17 @@ apt_packages:
       version:
     - name: iproute2
       version:
+    - name: iputils-ping
+      version:
+    - name: netcat
+      version:
+    - name: libcoap3
+      version:
+    - name: libcoap3-dev
+      version:
+    - name: pkg-config
+      version:
+#    - name: libcoap2
+#      version:
+#    - name: libcoap2-dev
+#      version:   

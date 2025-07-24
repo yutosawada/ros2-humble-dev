@@ -1,0 +1,6 @@
+coap_observer.pyのCoapObserverクラスををC++で実装したい。    
+src/adar_api_cpp/以下に作成して。必要ならばinclude/sonair_adar_controller/adar_api_cpp/にヘッダーファイルを作成して
+
+
+Adar.pyのAdarクラスををC++で実装したい。    
+src/adar_api_cpp/以下に作成して。必要ならばinclude/sonair_adar_controller/adar_api_cpp/にヘッダーファイルを作成して
